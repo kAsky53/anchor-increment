@@ -1,19 +1,19 @@
 import { expect } from "chai";
 import "mocha";
 import * as anchor from "@project-serum/anchor";
-const { SystemProgram } = anchor.web3;
+const { SystemProgram, Keypair } = anchor.web3;
 
 describe("anchor_increment_program", () => {
   const provider = anchor.Provider.env();
 
-  // Configure the client to use the local cluster.
+  // Configure the client to use the cluster.
   anchor.setProvider(provider);
 
   // Program
   const program = anchor.workspace.AnchorIncrementProgram;
 
   // Counter for the tests.
-  const counter = anchor.web3.Keypair.generate();
+  const counter = Keypair.generate();
 
   it("Initialize a counter", async () => {
     await program.rpc.initialize(provider.wallet.publicKey, {
@@ -28,6 +28,7 @@ describe("anchor_increment_program", () => {
     const counterAccount = await program.account.counter.fetch(
       counter.publicKey
     );
+
     expect(counterAccount.authority).to.deep.eq(provider.wallet.publicKey);
     expect(counterAccount.count.toNumber()).to.be.eq(0);
   });
