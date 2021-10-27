@@ -4,7 +4,7 @@ use std::mem::size_of;
 declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
 
 #[program]
-pub mod anchor_increment_program {
+pub mod increment {
     use super::*;
 
     pub fn initialize(ctx: Context<Initialize>, authority: Pubkey) -> ProgramResult {

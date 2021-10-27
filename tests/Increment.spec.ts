@@ -3,14 +3,14 @@ import "mocha";
 import * as anchor from "@project-serum/anchor";
 const { SystemProgram, Keypair } = anchor.web3;
 
-describe("anchor_increment_program", () => {
+describe("Increment", () => {
   const provider = anchor.Provider.env();
 
   // Configure the client to use the cluster.
   anchor.setProvider(provider);
 
   // Program
-  const program = anchor.workspace.AnchorIncrementProgram;
+  const program = anchor.workspace.Increment;
 
   // Counter for the tests.
   const counter = Keypair.generate();

@@ -1,7 +1,7 @@
 {
     "scripts": {
-        "lint": "npx eslint '**/*.ts' --fix",
-        "test": "mocha -r ts-node/register -t 10000 tests/**/*.ts"
+        "lint": "eslint '**/*.ts' --fix",
+        "test": "mocha -r ts-node/register -t 10000 tests/**/*.spec.ts"
     },
     "dependencies": {
         "@project-serum/anchor": "^0.17.0"

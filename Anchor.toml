@@ -1,12 +1,12 @@
 [programs.localnet]
-anchor_increment_program = "Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS"
+increment = "Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS"
 
 [registry]
 url = "https://anchor.projectserum.com"
 
 [provider]
 cluster = "localnet"
-wallet = "/home/wantanabe/.config/solana/id.json"
+wallet = "~/.config/solana/id.json"
 
 [scripts]
 test = "npm test"

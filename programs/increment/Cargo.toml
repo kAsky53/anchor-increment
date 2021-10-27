@@ -1,12 +1,12 @@
 [package]
-name = "anchor_increment_program"
+name = "increment"
 version = "0.1.0"
 description = "Created with Anchor"
 edition = "2018"
 
 [lib]
 crate-type = ["cdylib", "lib"]
-name = "anchor_increment_program"
+name = "increment"
 
 [features]
 no-entrypoint = []
