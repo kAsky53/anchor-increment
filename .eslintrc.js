@@ -24,7 +24,7 @@ module.exports = {
       rules: { "no-process-exit": "off" },
     },
     {
-      files: ["test/**"],
+      files: ["tests/**"],
       rules: {
         camelcase: "off",
         "node/no-missing-import": "off",
