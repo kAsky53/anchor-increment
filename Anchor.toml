@@ -1,6 +1,9 @@
 [programs.localnet]
 increment = "Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS"
 
+[programs.devnet]
+increment = "BuagH7BSsvFjSHDaE6nctHPYtDV8Z2dLDvc3MfKyVaX8"
+
 [registry]
 url = "https://anchor.projectserum.com"
 

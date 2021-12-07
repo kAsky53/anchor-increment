@@ -3,6 +3,10 @@ import "mocha";
 import * as anchor from "@project-serum/anchor";
 const { SystemProgram, Keypair } = anchor.web3;
 
+if (!process.env.ANCHOR_PROVIDER_URL) {
+  process.env.ANCHOR_PROVIDER_URL = "https://api.devnet.solana.com";
+}
+
 describe("Increment", () => {
   const provider = anchor.Provider.env();
 
@@ -22,6 +26,9 @@ describe("Increment", () => {
         user: provider.wallet.publicKey,
         systemProgram: SystemProgram.programId,
       },
+      instructions: [
+        await program.account.counter.createInstruction(counter),
+      ],
       signers: [counter],
     });
 
